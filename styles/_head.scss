@@ -1,0 +1,92 @@
+section.HeadSec {
+  background: $colorPrimary2;
+  width: 100%;
+  @include flex(column, center, center);
+  padding: 0 36px;
+  overflow: hidden;
+
+  header {
+    max-width: $configMaxWidth;
+    padding: 16px 0;
+    width: 100%;
+    @include flex(row, space-between, center);
+
+    .head--logo {
+      width: 48px;
+    }
+
+    .head--number {
+      padding: 8px 16px;
+      border-radius: 4px;
+      background: $colorGray1;
+      font-weight: 500;
+      font-size: 0.875rem;
+    }
+  }
+
+  .HeadSec--main {
+    width: 100%;
+    max-width: $configMaxWidth;
+    padding: 8px 0 32px;
+    @include flex(row, space-between, center);
+    gap: 8px;
+
+    .headMain--text {
+      @include flex(column, flex-start, center);
+      gap: 12px;
+      color: $colorGray1;
+      max-width: 520px;
+
+      h1 {
+        font-size: 2.125rem;
+        line-height: 2.75rem;
+      }
+
+      p {
+        font-size: 1rem;
+        line-height: 1.75rem;
+      }
+    }
+
+    .headMain--form {
+      width: 280px;
+      padding: 20px 18px;
+      background: $colorGray1;
+      border-radius: 8px;
+      @include flex(column, center, center);
+      gap: 16px;
+
+      h3 {
+        font-size: 1.25rem;
+        font-weight: 600;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        border: 1.75px solid $colorGray2;
+        padding: 8px;
+        font-size: 0.875rem;
+        border-radius: 4px;
+        font-family: $font-Roboto;
+        resize: none;
+      }
+
+      input::placeholder,
+      textarea::placeholder {
+        font-weight: 500;
+      }
+
+      button.form--action {
+        padding: 8px;
+        border-radius: 4px;
+        width: 100%;
+        @include flex(row, center, center);
+        background: $colorPrimaryMain1;
+        color: $colorGray1;
+        font-weight: 500;
+        font-size: 1rem;
+      }
+    }
+  }
+}
