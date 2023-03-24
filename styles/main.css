@@ -97,7 +97,7 @@ section.HeadSec .HeadSec--main {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: 8px;
+  gap: 32px;
 }
 section.HeadSec .HeadSec--main .headMain--text {
   display: flex;
@@ -117,7 +117,8 @@ section.HeadSec .HeadSec--main .headMain--text p {
   line-height: 1.75rem;
 }
 section.HeadSec .HeadSec--main .headMain--form {
-  width: 280px;
+  min-width: 280px;
+  width: 240px;
   padding: 20px 18px;
   background: #f8f9fa;
   border-radius: 8px;
@@ -161,6 +162,30 @@ section.HeadSec .HeadSec--main .headMain--form button.form--action {
   font-weight: 500;
   font-size: 1rem;
 }
+@media screen and (max-width: 768px) {
+  section.HeadSec .HeadSec--main {
+    flex-direction: column;
+    gap: 8px;
+  }
+  section.HeadSec .HeadSec--main .headMain--form {
+    min-width: none;
+    max-width: 360px;
+    width: 90%;
+  }
+}
+@media screen and (max-width: 425px) {
+  section.HeadSec {
+    padding: 0 24px;
+  }
+  section.HeadSec .HeadSec--main .headMain--text {
+    text-align: center;
+  }
+  section.HeadSec .HeadSec--main .headMain--text h1 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+  }
+}
 
 section.aboutSec {
   padding: 4rem 36px;
@@ -202,6 +227,27 @@ section.aboutSec .aboutSec--text p {
   font-weight: 500;
   color: #495057;
 }
+@media screen and (max-width: 900px) {
+  section.aboutSec {
+    padding: 4rem 24px;
+  }
+  section.aboutSec .illustration {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 768px) {
+  section.aboutSec {
+    flex-direction: column;
+  }
+  section.aboutSec .illustration {
+    width: 100%;
+  }
+  section.aboutSec .aboutSec--text {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+}
 
 section.serviceSec {
   width: 100%;
@@ -228,6 +274,9 @@ section.serviceSec .action {
   font-size: 1.25rem;
   font-weight: 500;
   color: #f8f9fa;
+}
+section.serviceSec a {
+  text-decoration: none;
 }
 section.serviceSec .serviceGrid {
   width: 100%;
@@ -259,6 +308,7 @@ section.serviceSec .serviceGrid--item h4 {
   font-size: 1.125rem;
   font-weight: 700;
   color: #212529;
+  margin-bottom: 0;
 }
 section.serviceSec .serviceGrid--item p {
   max-width: 360px;
@@ -269,6 +319,37 @@ section.serviceSec span.material-icons-outlined {
   flex-shrink: 0;
   font-size: 2.375rem;
   color: #343a40;
+}
+@media screen and (max-width: 768px) {
+  section.serviceSec {
+    padding: 3rem 24px;
+  }
+  section.serviceSec .serviceGrid {
+    gap: 24px;
+  }
+  section.serviceSec .serviceGrid--item {
+    gap: 8px;
+  }
+}
+@media screen and (max-width: 700px) {
+  section.serviceSec .serviceGrid {
+    grid-template-columns: 1fr;
+    grid-template-areas: "." "." "." "." "." ".";
+  }
+  section.serviceSec .serviceGrid--item h4 {
+    margin-bottom: 0;
+  }
+  section.serviceSec > h2 {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 600;
+  }
+}
+@media screen and (max-width: 425px) {
+  section.serviceSec .serviceGrid--item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 section.questionSec {
@@ -287,6 +368,8 @@ section.questionSec h2 {
 section.questionSec .questionList {
   width: 100%;
   max-width: 480px;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -309,6 +392,7 @@ section.questionSec .questionList--item .heading {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  gap: 4px;
   cursor: pointer;
 }
 section.questionSec .questionList--item .text {
@@ -345,6 +429,24 @@ section.questionSec .questionList--item.open .text {
   100% {
     opacity: 1;
     transform: translate3d(0, 0, 0);
+  }
+}
+@media screen and (max-width: 725px) {
+  section.questionSec {
+    padding: 3rem 24px;
+  }
+  section.questionSec h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  section.questionSec .questionList--item {
+    padding: 8px;
+  }
+}
+@media screen and (max-width: 425px) {
+  section.questionSec h2 {
+    font-size: 1.75rem;
   }
 }
 
@@ -398,9 +500,13 @@ section.lastSec .wrap--block p {
   font-weight: 600;
   text-align: center;
 }
-section.lastSec .wrap--block .action {
+section.lastSec .wrap--block a {
+  text-decoration: none;
   width: 100%;
   max-width: 400px;
+}
+section.lastSec .wrap--block .action {
+  width: 100%;
   background: #d51451;
   padding: 6px 16px;
   font-size: 1.125rem;
@@ -419,6 +525,28 @@ section.lastSec .wrap--block small {
   font-weight: 500;
   text-align: center;
   color: #495057;
+}
+@media screen and (max-width: 850px) {
+  section.lastSec .wrap {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 500px) {
+  section.lastSec {
+    padding: 3rem 16px;
+  }
+  section.lastSec .wrap--text {
+    text-align: center;
+  }
+  section.lastSec .wrap--text h1 {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  section.lastSec .wrap--block {
+    min-width: auto;
+    padding: 24px 16px;
+    width: 100%;
+  }
 }
 
 footer {

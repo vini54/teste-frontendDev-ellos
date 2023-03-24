@@ -35,4 +35,26 @@ section.aboutSec {
       color: $colorGray3;
     }
   }
+
+  @media screen and (max-width: 900px) {
+    padding: 4rem 24px;
+
+    .illustration {
+      width: 50%;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+
+    .illustration {
+      width: 100%;
+    }
+
+    .aboutSec--text {
+      width: 100%;
+      align-items: center;
+      text-align: center;
+    }
+  }
 }

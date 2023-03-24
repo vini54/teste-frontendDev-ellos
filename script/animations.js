@@ -25,6 +25,7 @@ const sr = ScrollReveal({
   origin: "top",
   duration: 1500,
   reset: true,
+  mobile: false,
 });
 
 ScrollReveal().reveal(".headMain--text h1", {
@@ -52,18 +53,14 @@ ScrollReveal().reveal(".aboutSec img", {
   opacity: 0.25,
   origin: "left",
   distance: "50%",
-  viewOffset: {
-    bottom: 150,
-  },
+  mobile: false,
 });
 
 ScrollReveal().reveal(".aboutSec--text h2", {
   opacity: 0.25,
   origin: "bottom",
   distance: "50%",
-  viewOffset: {
-    bottom: 150,
-  },
+  mobile: false,
 });
 
 ScrollReveal().reveal(".aboutSec--text p", {
@@ -71,12 +68,14 @@ ScrollReveal().reveal(".aboutSec--text p", {
   origin: "bottom",
   distance: "25%",
   delay: 750,
+  mobile: false,
 });
 
 ScrollReveal().reveal(".serviceSec > h2", {
   opacity: 0.25,
   origin: "top",
   distance: "100%",
+  mobile: false,
 });
 
 ScrollReveal().reveal(".questionSec > h2", {
@@ -93,6 +92,7 @@ serviceList.forEach((item, index) => {
     scale: 0.65,
     duration: 1000,
     delay: index * 250,
+    mobile: false,
   });
 });
 
@@ -110,6 +110,7 @@ ScrollReveal().reveal(".serviceSec > .action", {
   origin: "bottom",
   distance: "100%",
   duration: 1000,
+  mobile: false,
 });
 
 ScrollReveal().reveal(".lastSec .wrap--text", {
@@ -117,6 +118,7 @@ ScrollReveal().reveal(".lastSec .wrap--text", {
   origin: "left",
   distance: "50%",
   duration: 1500,
+  mobile: false,
 });
 
 ScrollReveal().reveal(".lastSec .wrap--block", {
@@ -124,4 +126,5 @@ ScrollReveal().reveal(".lastSec .wrap--block", {
   origin: "right",
   distance: "50%",
   duration: 1500,
+  mobile: false,
 });

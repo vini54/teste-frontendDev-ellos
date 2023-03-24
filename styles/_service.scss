@@ -20,6 +20,10 @@ section.serviceSec {
     color: $colorGray1;
   }
 
+  a {
+    text-decoration: none;
+  }
+
   .serviceGrid {
     width: 100%;
     max-width: $configMaxWidth;
@@ -49,6 +53,7 @@ section.serviceSec {
       font-size: 1.125rem;
       font-weight: 700;
       color: $colorGray5;
+      margin-bottom: 0;
     }
 
     p {
@@ -62,5 +67,42 @@ section.serviceSec {
     flex-shrink: 0;
     font-size: 2.375rem;
     color: $colorGray4;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 3rem 24px;
+    .serviceGrid {
+      gap: 24px;
+    }
+
+    .serviceGrid--item {
+      gap: 8px;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    .serviceGrid {
+      grid-template-columns: 1fr;
+      grid-template-areas: "." "." "." "." "." ".";
+    }
+
+    .serviceGrid--item {
+      h4 {
+        margin-bottom: 0;
+      }
+    }
+
+    & > h2 {
+      font-size: 2rem;
+      text-align: center;
+      font-weight: 600;
+    }
+  }
+
+  @media screen and (max-width: 425px) {
+    .serviceGrid--item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 }
